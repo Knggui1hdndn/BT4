@@ -4,6 +4,7 @@ var fs = require('fs');
 const server = http.createServer((req, res) => {
   // được sử dụng để lấy các tham số được truyền từ form HTML khi người dùng submit form.
   if (req.url == '/fileupload') {
+
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.filepath;
